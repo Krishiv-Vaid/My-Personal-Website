@@ -4,15 +4,32 @@ const site = document.querySelector('#site');
 const typed = document.querySelector('#typed');
 const enter = document.querySelector('#enter');
 const skip = document.querySelector('#skip');
+const scene = document.querySelector('.scene');
+const mobileSceneQuery = window.matchMedia('(max-width: 700px)');
+
+function updateSceneFraming(event) {
+  if (!scene) return;
+  scene.setAttribute(
+    'preserveAspectRatio',
+    event.matches ? 'xMidYMid meet' : 'xMidYMid slice'
+  );
+}
+
+updateSceneFraming(mobileSceneQuery);
+
+if (mobileSceneQuery.addEventListener) {
+  mobileSceneQuery.addEventListener('change', updateSceneFraming);
+} else {
+  mobileSceneQuery.addListener(updateSceneFraming);
+}
 
 const lines = [
   'welcome, terminal.',
   '',
-  '> locating krish.vaid ... found',
-  '> locating mathematics, physics, robotics, code ... found',
-  '> opening my small corner of the internet :D ... yay!',
-  '',
-  'ready. select ENTER to continue.'
+  '> locating krish.vaid ... found.',
+  '> loading mathematics, robotics, physics, and code ...',
+  '> opening my small corner of the internet :D ...',
+  ''
 ];
 
 let cancelled = false;
@@ -89,7 +106,7 @@ function beginEntrance() {
   boot.style.display = 'none';
   entrance.classList.add('active');
   entrance.setAttribute('aria-hidden', 'false');
-  window.setTimeout(revealSite, 3600);
+  window.setTimeout(revealSite, 2550);
 }
 
 function skipAll() {
