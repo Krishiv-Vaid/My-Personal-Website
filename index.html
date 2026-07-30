@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Krishiv Vaid — mathematical physics, software engineering, AI research, robotics, hardware, chess, and sport." />
+  <title>Krishiv Vaid — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="boot" class="boot" aria-label="Intro animation">
+    <button id="skip" class="skip" type="button">Skip animation</button>
+    <section class="terminal" aria-live="polite">
+      <div class="terminal-bar">
+        <span></span><span></span><span></span>
+        <b>krish@earth-terminal</b>
+      </div>
+      <div class="terminal-body">
+        <p id="typed"></p>
+        <button id="enter" class="enter" type="button" hidden>
+          <span class="go-line">let’s go</span>
+          <span class="press-line">press ENTER <kbd>↵</kbd></span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div id="entrance" class="entrance" aria-hidden="true">
+    <div class="scene-wrap">
+      <svg class="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A small figure walking through a violet, lamp-lit landscape toward a glowing doorway">
+        <defs>
+          <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+            <stop stop-color="#35215f" />
+            <stop offset=".56" stop-color="#5b408b" />
+            <stop offset="1" stop-color="#967aaa" />
+          </linearGradient>
+          <radialGradient id="moon">
+            <stop stop-color="#fffef3" />
+            <stop offset=".64" stop-color="#fff4c8" />
+            <stop offset="1" stop-color="#e7d5a7" />
+          </radialGradient>
+          <linearGradient id="grass" x1="0" x2="0" y1="0" y2="1">
+            <stop stop-color="#315b42" />
+            <stop offset="1" stop-color="#142f25" />
+          </linearGradient>
+          <linearGradient id="path" x1="0" x2="1">
+            <stop stop-color="#4b3a72" />
+            <stop offset="1" stop-color="#251c4d" />
+          </linearGradient>
+          <linearGradient id="door">
+            <stop stop-color="#fff9ce" />
+            <stop offset="1" stop-color="#e8c77c" />
+          </linearGradient>
+          <radialGradient id="lamp">
+            <stop stop-color="#ffe7a4" stop-opacity=".95" />
+            <stop offset="1" stop-color="#ffe7a4" stop-opacity="0" />
+          </radialGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="9" /></filter>
+          <filter id="lampGlow"><feGaussianBlur stdDeviation="18" /></filter>
+        </defs>
+
+        <rect width="1600" height="900" fill="url(#sky)" />
+        <circle cx="810" cy="135" r="44" fill="url(#moon)" />
+        <g fill="#efe6e9" opacity=".74">
+          <circle cx="165" cy="175" r="4" /><circle cx="334" cy="92" r="3" />
+          <circle cx="575" cy="168" r="4" /><circle cx="1015" cy="88" r="3" />
+          <circle cx="1430" cy="105" r="4" /><circle cx="1515" cy="275" r="3" />
+        </g>
+
+        <path d="M0 310 Q135 145 275 315 Q390 95 545 295 Q680 85 830 305 Q970 115 1110 295 Q1285 105 1440 295 Q1520 170 1600 250 V500 H0Z" fill="#292553" />
+        <path d="M0 420 Q190 250 350 435 Q530 275 700 440 Q880 260 1055 430 Q1285 255 1600 420 V570 H0Z" fill="#20392f" />
+        <path d="M0 520 Q250 365 480 540 Q760 370 1015 515 Q1300 360 1600 505 V900 H0Z" fill="url(#grass)" />
+        <ellipse cx="805" cy="710" rx="620" ry="190" fill="#10261f" opacity=".45" />
+        <path d="M0 900 V630 C170 595 310 625 420 695 C570 790 725 812 940 778 C1170 742 1360 748 1600 805 V900Z" fill="#274e37" />
+        <path d="M625 900 C700 770 770 685 855 620 C940 558 1018 505 1095 470 L1200 470 C1060 550 950 625 865 705 C795 773 742 841 710 900Z" fill="url(#path)" />
+
+        <g class="trees" fill="#14271f">
+          <path d="M120 610 V185 h44 v425z" /><path d="M245 590 V120 h52 v470z" />
+          <path d="M1390 620 V150 h50 v470z" /><path d="M1500 640 V210 h42 v430z" />
+        </g>
+        <g class="canopy" fill="#1c3a2c">
+          <circle cx="130" cy="180" r="110" /><circle cx="260" cy="120" r="130" />
+          <circle cx="1410" cy="150" r="135" /><circle cx="1510" cy="210" r="110" />
+        </g>
+
+        <g class="lamps">
+          <g transform="translate(360 455)">
+            <ellipse cx="0" cy="15" rx="100" ry="95" fill="url(#lamp)" filter="url(#lampGlow)" />
+            <path d="M0 25v250" stroke="#272622" stroke-width="12" />
+            <path d="M-27 20h54l-9 42h-36z" fill="#ffd985" stroke="#3c382d" stroke-width="8" />
+            <path d="M-42 275h84" stroke="#272622" stroke-width="16" stroke-linecap="round" />
+          </g>
+          <g transform="translate(970 395) scale(.82)">
+            <ellipse cx="0" cy="15" rx="100" ry="95" fill="url(#lamp)" filter="url(#lampGlow)" />
+            <path d="M0 25v250" stroke="#272622" stroke-width="12" />
+            <path d="M-27 20h54l-9 42h-36z" fill="#ffd985" stroke="#3c382d" stroke-width="8" />
+            <path d="M-42 275h84" stroke="#272622" stroke-width="16" stroke-linecap="round" />
+          </g>
+        </g>
+
+        <path d="M1060 480 L1088 236 Q1122 140 1195 145 L1305 165 L1384 490Z" fill="#17142c" />
+        <path d="M1123 482 L1133 203 Q1170 145 1230 163 L1326 187 L1340 484Z" fill="#272142" />
+
+        <g class="door-palm-leaves" fill="#294a37">
+          <path d="M1120 224 C1045 174 994 137 935 124 C1007 123 1070 146 1140 193 C1129 159 1118 127 1092 96 C1140 126 1170 161 1186 207Z" />
+          <path d="M1305 226 C1377 174 1431 145 1494 139 C1420 128 1353 151 1289 194 C1304 155 1324 120 1355 91 C1302 119 1270 159 1255 207Z" />
+          <path d="M1178 206 C1145 134 1130 83 1137 35 C1175 91 1194 143 1202 202Z" />
+          <path d="M1238 205 C1266 135 1288 86 1323 51 C1308 112 1288 160 1262 211Z" />
+        </g>
+
+        <rect x="1173" y="246" width="120" height="238" rx="3" fill="#121024" />
+        <rect x="1192" y="271" width="83" height="213" fill="url(#door)" />
+        <ellipse cx="1233" cy="456" rx="105" ry="38" fill="#fff0a0" opacity=".38" filter="url(#soft)" />
+        <path d="M1264 271 Q1233 334 1192 390 V271Z" fill="#efdda3" opacity=".62" />
+
+        <g id="walker" class="walker">
+          <ellipse class="walker-shadow" cx="505" cy="807" rx="48" ry="16" fill="#0b1117" opacity=".34" filter="url(#soft)" />
+          <g class="walker-body">
+            <circle cx="500" cy="660" r="37" fill="#dc8664" />
+            <path d="M465 661 Q500 615 537 656 Q527 612 494 612 Q461 616 465 661Z" fill="#142238" />
+            <rect x="463" y="699" width="74" height="64" rx="28" fill="#12253b" />
+            <path class="leg leg-left" d="M478 757 L465 810" stroke="#172035" stroke-width="20" stroke-linecap="round" />
+            <path class="leg leg-right" d="M520 757 L535 810" stroke="#172035" stroke-width="20" stroke-linecap="round" />
+            <path class="arm arm-left" d="M468 715 L432 752" stroke="#dc8664" stroke-width="14" stroke-linecap="round" />
+            <path class="arm arm-right" d="M532 716 L566 745" stroke="#dc8664" stroke-width="14" stroke-linecap="round" />
+            <path d="M484 662 h7 M510 662 h7" stroke="#1d2430" stroke-width="6" stroke-linecap="round" />
+          </g>
+        </g>
+        <path class="door-foreground" d="M1173 246h120v238h-18V271h-83v213h-19z" fill="#121024" />
+      </svg>
+      <p class="entrance-caption">opening my small corner of the internet :D ... yay!</p>
+    </div>
+  </div>
+
+  <main id="site" class="site" hidden>
+    <nav>
+      <a class="brand" href="#top" aria-label="Back to top">KV</a>
+      <div>
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#life">Beyond work</a>
+      </div>
+      <a class="nav-email" href="mailto:krish.vaid22@gmail.com">Email me</a>
+    </nav>
+
+    <header id="top" class="hero section">
+      <p class="eyebrow">✦ Welcome to my corner of the internet!</p>
+      <h1><span id="hello"></span><span class="cursor">|</span></h1>
+      <p class="lede">I’m an incoming student at the University of Waterloo (!!) studying Mathematical Physics. I’m interested in mathematics &amp; physics (obviously!), software engineering, and AI research. Outside of that, I enjoy tinkering with electronics and robotics, competitive programming (on Codeforces!), playing sports, and spending time with family and friends.</p>
+      <div class="hero-actions">
+        <a class="primary" href="#projects">See what I’ve built</a>
+        <a class="secondary" href="mailto:krish.vaid22@gmail.com">Say hello</a>
+      </div>
+      <div class="stat-row" aria-label="Selected highlights">
+        <span><i class="stat-icon mushroom-icon" aria-hidden="true"></i><span class="stat-copy"><strong>Prev. SWE Intern</strong><small>@ Orangutany</small></span></span>
+        <span><i class="stat-icon vector-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 18 5-12 3 7 3-7 5 12M7 14h10" /></svg></i><span class="stat-copy"><strong>Incoming RA</strong><small>at the Vector Institute for AI</small></span></span>
+        <span><i class="stat-icon aime-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 3.8 7.5v9L12 21l8.2-4.5v-9L12 3Zm0 0v18M3.8 7.5 12 12l8.2-4.5" /></svg></i><span class="stat-copy"><strong>AIME</strong><small>Qualifier</small></span></span>
+        <span><i class="stat-icon chess-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 21h8M9 17h6l1 4H8l1-4Zm1-9h4l2 4-2 5h-4l-2-5 2-4Zm2-5v5m-2-3h4" /></svg></i><span class="stat-copy"><strong>2200 Chess</strong><small>(Candidate Master)</small></span></span>
+      </div>
+    </header>
+
+    <section id="about" class="section split">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Curious across equations, code, circuit, and machines that move!</h2>
+      </div>
+      <div class="body-copy">
+        <p>I like hard problems where math and physics meet physical systems. That has taken me from contest mathematics and competitive programming to autonomous robotics, software engineering, and biomedical device research.</p>
+        <p>I’m especially drawn to work that requires patient thinking, clean execution, and a willingness to test ideas in real world systems.</p>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <p class="eyebrow">Experience</p>
+      <h2>Learning by building, researching, and mentoring.</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="role-mark vector-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 49 24 15l8 19 8-19 14 34M18 40h28" /></svg></div>
+          <div class="role-copy"><span>Artificial intelligence research</span><h3>Incoming Research Assistant · Vector Institute for Artificial Intelligence</h3><p>I will be joining the Vector Institute for Artificial Intelligence as a research assistant, working on mathematically grounded machine learning, research engineering, and careful experimentation.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="role-mark cyron-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 22 32 12l18 10v20L32 52 14 42V22Zm18-10v40M14 22l18 10 18-10M14 42l18-10 18 10" /></svg></div>
+          <div class="role-copy"><span>Embodied AI · Robotics infrastructure</span><h3>Founder &amp; Technical Lead · Cyron</h3><p>I’m building an embodied AI infrastructure platform for training robotic capabilities in simulation, publishing them, and reusing them across compatible robot embodiments. I’m currently developing the technical architecture around digital twins, reinforcement learning, URDF compatibility, policy versioning, reusable robotic behaviours, and a simulation-first open robotics ecosystem.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="role-mark mushroom" aria-hidden="true"><span></span></div>
+          <div class="role-copy"><span>Full-stack software · Computer vision</span><h3>Software Engineering Intern · Orangutany</h3><p>I built and shipped major parts of Orangutany’s AI-powered mushroom identification product and its 143-species educational guide. I worked across the frontend, backend APIs, data pipelines, image workflows, identification results, and detailed species content covering visual features, habitat, seasonality, edibility, and dangerous look-alikes.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="role-mark hack-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 18h36v28H14zM22 28l7 6-7 6M34 40h10" /></svg></div>
+          <div class="role-copy"><span>Technical mentorship</span><h3>Technical Mentor · Hack the 6ix</h3><p>I mentored hackers at Toronto’s largest student-run hackathon at the University of Toronto (St. George). I helped participants design their systems, choose practical approaches, debug problems, and turn ideas into working demos.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="role-mark research-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M24 10h16M28 10v16L16 48a5 5 0 0 0 4 7h24a5 5 0 0 0 4-7L36 26V10M22 42h20" /></svg></div>
+          <div class="role-copy"><span>Brain computer interfaces</span><h3>Research Intern · STEMinate</h3><p>I collaborated with professors from the University of Michigan and industry professionals from Neuralink to further research on brain computer interfaces. I studied neural signal acquisition, electrophysiology, electrode interfaces, signal processing, decoding pipelines, and biomedical device constraints while contributing to a formal research paper.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="role-mark teach-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M12 18h40v28H12zM20 26h24M20 34h16M28 46v8m-8 0h16" /></svg></div>
+          <div class="role-copy"><span>STEM instruction</span><h3>Robotics &amp; Mathematics Instructor · YRES</h3><p>I taught mathematics, robot design, and programming with LEGO NXT software. I guided younger students through problem solving, iterative building, debugging, and hands-on robotics activities.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <p class="eyebrow">Selected work</p>
+      <h2>Things I’ve built, tested, and sent into the real world.</h2>
+      <div class="project-grid project-grid-three">
+        <article class="project-card hardware-project">
+          <div class="project-symbol" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M32 8c9 8 14 18 14 30l-14 10-14-10c0-12 5-22 14-30Z"/><path d="M24 42 18 54l14-6 14 6-6-12M32 20v18"/><circle cx="32" cy="27" r="4"/></svg>
+          </div>
+          <span>Hardware · Aerospace</span>
+          <h3>5,000-foot Instrumented Rocket</h3>
+          <p>Designed and built a rocket that reached approximately 5,000 feet. I integrated custom avionics, barometric pressure sensors for altitude measurement, apogee detection, and maximum-height recording, along with embedded electronics, calibrated flight-data logging, custom and 3D-printed components, an onboard FPV camera, and a post-flight analysis workflow.</p>
+        </article>
+        <article class="project-card software-project">
+          <div class="project-symbol" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><rect x="10" y="13" width="44" height="38" rx="7"/><path d="M18 23h28M20 34h10M20 42h17M41 34h5M42 42h4"/></svg>
+          </div>
+          <span>Software · Hackathon winner</span>
+          <h3>Centsible</h3>
+          <p>Built a budgeting application for teenagers and won Most Useful Project at the BHSS Hackathon. It was also recognized for having the best UI, with accessible expense tracking, practical budgeting workflows, and clear financial feedback.</p>
+          <a class="project-link" href="https://codesandbox.io/p/sandbox/r42xyd?file=%2Fsrc%2FApp.tsx%3A803%2C25" target="_blank" rel="noreferrer">Open Centsible ↗</a>
+        </article>
+        <article class="project-card software-project">
+          <div class="project-symbol" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M12 18h40v30H12zM20 26l7 6-7 6M32 39h12"/><path d="M22 12h20M24 48v5m16-5v5"/></svg>
+          </div>
+          <span>Software · Games</span>
+          <h3>Java Games &amp; Software Experiments</h3>
+          <p>Built interactive games and software systems in Java using object-oriented architecture, state machines, event-driven interfaces, collision logic, algorithms, and maintainable code organization.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section achievements">
+      <p class="eyebrow">Highlights</p>
+      <h2>A few numbers and milestones.</h2>
+      <div class="achievement-list">
+        <div><b>AIME Qualifier</b><span>Qualified through a top-5% AMC 12 performance</span></div>
+        <div><b>11× CEMC Distinction</b><span>Across the CEMC high school mathematics contests and the Beaver Computing Challenge</span></div>
+        <div><b>Academic Science Certificate of Distinction</b><span>For building an autonomous lunar rover robot</span></div>
+        <div><b>4× Honour Roll</b><span>Four years of academic distinction</span></div>
+        <div><b>2nd Fastest Provincial Swimmer</b><span>100 m individual medley</span></div>
+      </div>
+    </section>
+
+    <section id="life" class="section">
+      <p class="eyebrow">Beyond work</p>
+      <h2>Competition, leadership, and long-term practice.</h2>
+      <div class="life-grid">
+        <article class="life-card-with-icon">
+          <div class="life-icon chess-life-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M32 8v14m-7-7h14M20 28h24l-4 12H24l-4-12Zm4 12h16l4 10H20l4-10Zm-7 10h30v6H17z" /></svg>
+          </div>
+          <div><span>Chess leadership &amp; competition</span><h3>Co-President · 2200-rated · 14 years</h3><p>I organized inter-school and intra-school tournaments, helped run the chess club, competed on the school chess team, and primarily enjoy rapid and blitz.</p></div>
+        </article>
+        <article class="life-card-with-icon">
+          <div class="life-icon cpp-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="m32 6 23 13v26L32 58 9 45V19L32 6Z"/><text x="16" y="39">C++</text></svg>
+          </div>
+          <div><span>Competitive programming</span><h3>Codeforces · 2000</h3><p>I compete primarily in C++, working across algorithms, data structures, graph theory, dynamic programming, combinatorics, geometry, and fast implementation.</p></div>
+        </article>
+        <article class="life-card-with-icon">
+          <div class="life-icon swim-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="25" cy="16" r="6"/><path d="m10 31 15-8 13 8 12-3M7 43c6-5 11 5 17 0s11 5 17 0 10 5 16 0M7 52c6-5 11 5 17 0s11 5 17 0 10 5 16 0"/></svg>
+          </div>
+          <div><span>Competitive swimming</span><h3>Mallards Swim Team · 8 years</h3><p>I swam competitively with Mallards for eight years, achieved the second-fastest provincial result in the 100-metre individual medley, and was recognized as Most Improved Swimmer.</p></div>
+        </article>
+        <article class="life-card-with-icon">
+          <div class="life-icon hackathon-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M18 12h28v9c0 11-6 19-14 23-8-4-14-12-14-23v-9ZM18 18H9v5c0 8 5 13 13 14M46 18h9v5c0 8-5 13-13 14M32 44v9m-12 0h24"/><path d="m26 24-5 4 5 4m12-8 5 4-5 4m-3-12-6 16"/></svg>
+          </div>
+          <div><span>Building under pressure</span><h3>3× Hackathon Wins</h3><p>I’ve earned three hackathon wins by turning ideas into useful, polished projects under tight deadlines, including Most Useful Project and Best UI recognition for Centsible.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Have an interesting question or want to reach out?</h2>
+      <p>Software, AI research, robotics, hardware, mathematics, or physics. I’m always happy to hear about something worth thinking through.</p>
+      <div>
+        <a class="primary" href="mailto:krish.vaid22@gmail.com">Shoot me an email!</a>
+        <a class="secondary" href="https://www.linkedin.com/in/krishiv-vaid" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+    </section>
+
+    <footer><span>© 2026 Krishiv Vaid</span><span>citizen of the earth</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
