@@ -92,6 +92,14 @@ body {
   border-radius: 6px;
   font: inherit;
 }
+.enter:focus {
+  outline: none;
+}
+.enter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
 
 .skip {
   position: absolute;
@@ -102,6 +110,13 @@ body {
   color: #88958e;
   font: 13px "JetBrains Mono", monospace;
   cursor: pointer;
+}
+.skip:focus {
+  outline: none;
+}
+.skip:focus-visible {
+  outline: 2px solid #88958e;
+  outline-offset: 3px;
 }
 
 .entrance {
